@@ -38,8 +38,25 @@ incident_date|city        |state|description                                    
    
 SELECT
 	incident_date,
-	to_char(incident_date, 'Day') AS day_of_week
+	to_char(incident_date, 'Day') AS day_of_week,
+	lower(city) AS city,
+	lower(state) AS state,
+	CASE
+		WHEN description LIKE '%(__)%' THEN split_part(description, ')', 2)
+		ELSE description
+	END AS description,
+	lower(plan) AS plan,
+	lower(citation) AS citation
 FROM
  	fatalities
 ORDER BY 
  	incident_date
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
