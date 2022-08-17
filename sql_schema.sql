@@ -136,6 +136,24 @@ citation|count|
 yes     | 3363|
 no      | 2730|
  	
- 	
+-- What day of the week has the most fatalities and what is the overall percentage?
+
+SELECT
+	day_of_week,
+	n_fatalities,
+	round(n_fatalities / sum(sum(n_fatalities)) OVER () * 100, 2) AS percentage
+from
+	(SELECT
+		day_of_week,
+		count(*) AS n_fatalities
+	FROM 
+		fatalities_cleaned
+	GROUP BY 
+		day_of_week) AS tmp
+GROUP BY
+	day_of_week,
+	n_fatalities
+ORDER BY 
+	n_fatalities desc;
  	
  	
