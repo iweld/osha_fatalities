@@ -10,16 +10,20 @@ CREATE TABLE fatalities (
 	state varchar(20),
 	description varchar(250),
 	plan varchar(10),
-	citation varchar(5)
+	citation varchar(10)
 );
 
 COPY fatalities
-FROM '**path to ** osha_fatalities_2017_2022_cleaned.csv'
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\osha_fatalities_2017_2022_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy16_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 -- Test newly populated database
 
-SELECT * FROM fatalities LIMIT 10;
+SELECT count(*) FROM fatalities;
 
 -- Reults:
 
@@ -50,15 +54,16 @@ CREATE TEMP TABLE fatalities_cleaned AS (
 			ELSE description
 		END AS description,
 		CASE
-			WHEN lower(plan) = 'state plan' THEN 'state'
-			ELSE 'federal'
+			WHEN lower(plan) = 'state plan' OR lower(plan) = 'state' THEN 'state'
+			WHEN lower(plan) = 'federal' THEN 'federal'
+			ELSE 'unknown'
 		END AS plan,
 		lower(citation) AS citation
 	FROM
 	 	fatalities
 );
  	
-SELECT * FROM fatalities_cleaned ORDER BY incident_date LIMIT 10;
+SELECT * FROM fatalities_cleaned ORDER BY incident_date;
  	
 -- Results:
 
@@ -86,7 +91,7 @@ FROM
 
 n_fatalities|
 ------------+
-        6093|
+        7168|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -135,6 +140,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
+unknown | 1075|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -155,5 +161,17 @@ GROUP BY
 	n_fatalities
 ORDER BY 
 	n_fatalities desc;
+
+-- Results:
+
+day_of_week|n_fatalities|percentage|
+-----------+------------+----------+
+Tuesday    |        1325|     18.48|
+Thursday   |        1278|     17.83|
+Wednesday  |        1278|     17.83|
+Monday     |        1243|     17.34|
+Friday     |        1132|     15.79|
+Saturday   |         571|      7.97|
+Sunday     |         341|      4.76|
  	
  	
