@@ -58,7 +58,7 @@ CREATE TEMP TABLE fatalities_cleaned AS (
 	 	fatalities
 );
  	
-SELECT * FROM fatalities_cleaned LIMIT 10;
+SELECT * FROM fatalities_cleaned ORDER BY incident_date LIMIT 10;
  	
 -- Results:
 
@@ -75,8 +75,66 @@ incident_date|day_of_week|city        |state|description                        
    2022-03-28|Monday     |houston     |tx   | electrocuted by power lines while trimming trees.        |federal|no      |
    2022-03-25|Friday     |williamsburg|ia   | fatally engulfed in corn bin.                            |federal|yes     |
    
+-- What is the number of reported incidents?
+   
+SELECT 
+	count(*) AS n_fatalities
+FROM 
+	fatalities_cleaned;
 
- 	
+-- Results:
+
+n_fatalities|
+------------+
+        6093|
+        
+-- What is the year to year change for the number of fatal incidents?
+        
+WITH get_yearly_fatalities AS (
+	SELECT 
+		date_part('year', incident_date)::int AS incident_year,
+		count(*) AS n_fatalities
+	FROM 
+		fatalities_cleaned
+	GROUP BY 
+		incident_year
+	ORDER BY incident_year
+)
+
+SELECT
+	incident_year,
+	n_fatalities,
+	lag(n_fatalities) OVER () AS previous_year,
+	round(((n_fatalities::float / lag(n_fatalities) OVER ()::float) - 1) * 100) AS year_to_year
+FROM get_yearly_fatalities
+WHERE incident_year <> '2022';
+
+-- Results:
+
+incident_year|n_fatalities|previous_year|year_to_year|
+-------------+------------+-------------+------------+
+         2017|        1261|             |            |
+         2018|        1273|         1261|         1.0|
+         2019|        1392|         1273|         9.0|
+         2020|        1134|         1392|       -19.0|
+         2021|         960|         1134|       -15.0|
+         
+-- What is the number of fatalities that received a citation?
+         
+SELECT
+	citation,
+	count(*)
+FROM
+	fatalities_cleaned
+GROUP BY 
+	citation;
+
+-- Results:
+
+citation|count|
+--------+-----+
+yes     | 3363|
+no      | 2730|
  	
  	
  	
