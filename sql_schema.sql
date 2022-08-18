@@ -29,11 +29,23 @@ COPY fatalities
 FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy15_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy13_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
 -- Test newly populated database
 
 SELECT count(*) FROM fatalities;
 
 -- Reults:
+
+count|
+-----+
+10892|
+
+SELECT * FROM fatalities LIMIT 10;
+
+-- Results:
 
 incident_date|city        |state|description                                                                 |plan   |citation|
 -------------+------------+-----+----------------------------------------------------------------------------+-------+--------+
@@ -71,7 +83,7 @@ CREATE TEMP TABLE fatalities_cleaned AS (
 	 	fatalities
 );
  	
-SELECT * FROM fatalities_cleaned ORDER BY incident_date;
+SELECT * FROM fatalities_cleaned ORDER BY incident_date DESC LIMIT 10;
  	
 -- Results:
 
@@ -99,7 +111,7 @@ FROM
 
 n_fatalities|
 ------------+
-        9769|
+       10892|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -126,8 +138,9 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2013|         324|             |            |
-         2014|        1359|          324|       319.0|
+         2012|         244|             |            |
+         2013|        1203|          244|       393.0|
+         2014|        1359|         1203|        13.0|
          2015|        1156|         1359|       -15.0|
          2016|         837|         1156|       -28.0|
          2017|        1261|          837|        51.0|
@@ -152,7 +165,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 3676|
+unknown | 4799|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -178,12 +191,12 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-Tuesday    |        1798|     18.41|
-Thursday   |        1747|     17.88|
-Wednesday  |        1733|     17.74|
-Monday     |        1711|     17.51|
-Friday     |        1542|     15.78|
-Saturday   |         762|      7.80|
-Sunday     |         476|      4.87|
+Tuesday    |        1982|     18.20|
+Wednesday  |        1944|     17.85|
+Thursday   |        1939|     17.80|
+Monday     |        1918|     17.61|
+Friday     |        1722|     15.81|
+Saturday   |         850|      7.80|
+Sunday     |         537|      4.93|
  	
  	
