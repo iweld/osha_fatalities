@@ -21,6 +21,14 @@ COPY fatalities
 FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy16_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy14_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy15_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
 -- Test newly populated database
 
 SELECT count(*) FROM fatalities;
@@ -91,7 +99,7 @@ FROM
 
 n_fatalities|
 ------------+
-        7168|
+        9769|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -118,7 +126,11 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2017|        1261|             |            |
+         2013|         324|             |            |
+         2014|        1359|          324|       319.0|
+         2015|        1156|         1359|       -15.0|
+         2016|         837|         1156|       -28.0|
+         2017|        1261|          837|        51.0|
          2018|        1273|         1261|         1.0|
          2019|        1392|         1273|         9.0|
          2020|        1134|         1392|       -19.0|
@@ -140,7 +152,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 1075|
+unknown | 3676|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -166,12 +178,12 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-Tuesday    |        1325|     18.48|
-Thursday   |        1278|     17.83|
-Wednesday  |        1278|     17.83|
-Monday     |        1243|     17.34|
-Friday     |        1132|     15.79|
-Saturday   |         571|      7.97|
-Sunday     |         341|      4.76|
+Tuesday    |        1798|     18.41|
+Thursday   |        1747|     17.88|
+Wednesday  |        1733|     17.74|
+Monday     |        1711|     17.51|
+Friday     |        1542|     15.78|
+Saturday   |         762|      7.80|
+Sunday     |         476|      4.87|
  	
  	
