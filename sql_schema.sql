@@ -18,7 +18,7 @@ FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\osha_fatalities_20
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy16_federal-state_summaries_cleaned.csv'
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy13_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
@@ -30,7 +30,11 @@ FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy15_federal-state
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy13_federal-state_summaries_cleaned.csv'
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy16_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy17_federal-state_summaries cleaned.csv'
 with (format csv, header);
 
 -- Test newly populated database
@@ -41,7 +45,7 @@ SELECT count(*) FROM fatalities;
 
 count|
 -----+
-10892|
+11461|
 
 SELECT * FROM fatalities LIMIT 10;
 
@@ -111,7 +115,7 @@ FROM
 
 n_fatalities|
 ------------+
-       10892|
+       11461|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -142,9 +146,9 @@ incident_year|n_fatalities|previous_year|year_to_year|
          2013|        1203|          244|       393.0|
          2014|        1359|         1203|        13.0|
          2015|        1156|         1359|       -15.0|
-         2016|         837|         1156|       -28.0|
-         2017|        1261|          837|        51.0|
-         2018|        1273|         1261|         1.0|
+         2016|        1113|         1156|        -4.0|
+         2017|        1554|         1113|        40.0|
+         2018|        1273|         1554|       -18.0|
          2019|        1392|         1273|         9.0|
          2020|        1134|         1392|       -19.0|
          2021|         960|         1134|       -15.0|
@@ -165,7 +169,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 4799|
+unknown | 5368|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -191,12 +195,50 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-Tuesday    |        1982|     18.20|
-Wednesday  |        1944|     17.85|
-Thursday   |        1939|     17.80|
-Monday     |        1918|     17.61|
-Friday     |        1722|     15.81|
-Saturday   |         850|      7.80|
-Sunday     |         537|      4.93|
+Tuesday    |        2093|     18.26|
+Wednesday  |        2053|     17.91|
+Thursday   |        2043|     17.83|
+Monday     |        2020|     17.62|
+Friday     |        1799|     15.70|
+Saturday   |         898|      7.84|
+Sunday     |         555|      4.84|
+
+-- What is the number of fatalities involving welding?
+
+SELECT
+	count(*) AS welding_fatalities
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%weld%'
+
+-- Results:
+
+welding_fatalities|
+------------------+
+                41|
+                
+-- Select the last 5 from the previous query
+                
+SELECT
+	*
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%weld%'
+ORDER BY 
+	incident_date DESC
+LIMIT 5;
+
+-- Results:
+
+incident_date|day_of_week|city     |state|description                                            |plan   |citation|
+-------------+-----------+---------+-----+-------------------------------------------------------+-------+--------+
+   2021-04-14|Wednesday  |cleveland|oh   |Worker electrocuted by portable welding machine.       |federal|yes     |
+   2021-01-30|Saturday   |mission  |tx   |Worker died in welding explosion.                      |federal|yes     |
+   2020-12-10|Thursday   |urbana   |oh   |Worker fatally crushed by seam welder.                 |federal|yes     |
+   2020-05-24|Sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
+   2019-07-08|Monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
+
  	
  	
