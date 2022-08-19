@@ -14,27 +14,27 @@ CREATE TABLE fatalities (
 );
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\osha_fatalities_2017_2022_cleaned.csv'
+FROM '** path to ** osha_fatalities_2017_2022_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy13_federal-state_summaries_cleaned.csv'
+FROM '** path to ** fy13_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy14_federal-state_summaries_cleaned.csv'
+FROM '** path to ** fy14_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy15_federal-state_summaries_cleaned.csv'
+FROM '** path to ** fy15_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy16_federal-state_summaries_cleaned.csv'
+FROM '** path to ** fy16_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
-FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy17_federal-state_summaries cleaned.csv'
+FROM '** path to ** fy17_federal-state_summaries cleaned.csv'
 with (format csv, header);
 
 -- Test newly populated database
