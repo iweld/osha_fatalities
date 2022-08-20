@@ -8,13 +8,17 @@ CREATE TABLE fatalities (
 	incident_date date,
 	city varchar(50),
 	state varchar(20),
-	description varchar(250),
+	description text,
 	plan varchar(10),
 	citation varchar(10)
 );
 
 COPY fatalities
 FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\osha_fatalities_2017_2022_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy11_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
 COPY fatalities
@@ -221,7 +225,7 @@ WHERE
 
 welding_fatalities|
 ------------------+
-                41|
+                50|
                 
 -- Select the last 5 from the previous query
                 
