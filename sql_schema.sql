@@ -18,6 +18,14 @@ FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\osha_fatalities_20
 with (format csv, header);
 
 COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy09_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
+FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy10_federal-state_summaries_cleaned.csv'
+with (format csv, header);
+
+COPY fatalities
 FROM 'C:\Users\Jaime\Desktop\DataSets\OSHA Fatalities\cleaned\fy11_federal-state_summaries_cleaned.csv'
 with (format csv, header);
 
@@ -53,7 +61,7 @@ SELECT count(*) FROM fatalities;
 
 count|
 -----+
-12555|
+15077|
 
 SELECT * FROM fatalities LIMIT 10;
 
@@ -123,7 +131,7 @@ FROM
 
 n_fatalities|
 ------------+
-       12555|
+       15077|
         
 -- What is the year to year change for the number of fatal incidents?
         
