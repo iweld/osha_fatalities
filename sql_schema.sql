@@ -119,7 +119,7 @@ FROM
 
 n_fatalities|
 ------------+
-       11461|
+       12555|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -146,8 +146,9 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2012|         244|             |            |
-         2013|        1203|          244|       393.0|
+         2011|         314|            1|     31300.0|
+         2012|        1023|          314|       226.0|
+         2013|        1203|         1023|        18.0|
          2014|        1359|         1203|        13.0|
          2015|        1156|         1359|       -15.0|
          2016|        1113|         1156|        -4.0|
@@ -173,7 +174,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 5368|
+unknown | 6462|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -199,13 +200,13 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-Tuesday    |        2093|     18.26|
-Wednesday  |        2053|     17.91|
-Thursday   |        2043|     17.83|
-Monday     |        2020|     17.62|
-Friday     |        1799|     15.70|
-Saturday   |         898|      7.84|
-Sunday     |         555|      4.84|
+Tuesday    |        2296|     18.29|
+Wednesday  |        2257|     17.98|
+Thursday   |        2221|     17.69|
+Monday     |        2217|     17.66|
+Friday     |        1973|     15.71|
+Saturday   |         979|      7.80|
+Sunday     |         612|      4.87|
 
 -- What is the number of fatalities involving welding?
 
