@@ -34,7 +34,9 @@ incident_date|city        |state|description                                    
 -- Create a new temp table with 'cleaned' and formatted data  
 
 -- Add a day of the week column.
--- 
+-- Convert columns to lowercase.
+-- Remove victim names and age
+-- Fix plan columm for consistency
  
 DROP TABLE IF EXISTS fatalities_cleaned;
 CREATE TEMP TABLE fatalities_cleaned AS (
@@ -85,7 +87,7 @@ FROM
 
 n_fatalities|
 ------------+
-       15077|
+       15076|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -112,7 +114,7 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2009|         518|            0|           0|
+         2009|         518|            0|         0.0|
          2010|        1120|          518|       116.0|
          2011|        1198|         1120|         7.0|
          2012|        1023|         1198|       -15.0|
@@ -142,7 +144,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 8984|
+unknown | 8983|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -207,11 +209,11 @@ LIMIT 5;
 
 incident_date|day_of_week|city     |state|description                                            |plan   |citation|
 -------------+-----------+---------+-----+-------------------------------------------------------+-------+--------+
-   2021-04-14|Wednesday  |cleveland|oh   |Worker electrocuted by portable welding machine.       |federal|yes     |
-   2021-01-30|Saturday   |mission  |tx   |Worker died in welding explosion.                      |federal|yes     |
-   2020-12-10|Thursday   |urbana   |oh   |Worker fatally crushed by seam welder.                 |federal|yes     |
-   2020-05-24|Sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
-   2019-07-08|Monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
+   2021-04-14|wednesday  |cleveland|oh   |Worker electrocuted by portable welding machine.       |federal|yes     |
+   2021-01-30|saturday   |mission  |tx   |Worker died in welding explosion.                      |federal|yes     |
+   2020-12-10|thursday   |urbana   |oh   |Worker fatally crushed by seam welder.                 |federal|yes     |
+   2020-05-24|sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
+   2019-07-08|monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
 
  	
  	
