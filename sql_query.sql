@@ -214,6 +214,9 @@ incident_date|day_of_week|city     |state|description                           
    2020-12-10|thursday   |urbana   |oh   |Worker fatally crushed by seam welder.                 |federal|yes     |
    2020-05-24|sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
    2019-07-08|monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
+   
+
+SELECT DISTINCT state FROM fatalities_cleaned
 
  	
  	

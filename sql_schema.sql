@@ -209,7 +209,7 @@ INSERT INTO public.fatalities VALUES ('2009-09-02', 'encinal', 'tx', 'Employee w
 INSERT INTO public.fatalities VALUES ('2009-09-02', 'naples', 'ny', 'Employee operating a skid steer loader on a slope was killed when the skid stree loader rolled over.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-08-13', 'millerburg', 'pa', 'Employee fell down the stairs. Stairs did not have a hand rail.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-08-18', 'pittsburgh', 'pa', 'Employee was performing masonry work 250 feet above ground but was not wearing fall protection. Fall to the ground resulted in fatal injuries.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2009-09-02', NULL, 'hi', 'The worker was found in the freezer warehouse at forklift operator station.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2009-09-02', 'unknown', 'hi', 'The worker was found in the freezer warehouse at forklift operator station.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-09-02', 'east elmhurst', 'ny', 'The worker developed breathing problems. EMS arrived and took the Worker to the hospital. The worker died at the hospital.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-09-03', 'clairton', 'pa', 'Two employees were working inside a confined space area when an explosion occurred, then a fire. One employee fatality and one employee was hospitalized.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-17', 'souderton', 'pa', 'Worker was crushed by a section of steel plate.', 'unknown', 'unknown');
@@ -619,7 +619,7 @@ INSERT INTO public.fatalities VALUES ('2010-01-08', 'mary', 'fl', 'Worker was do
 INSERT INTO public.fatalities VALUES ('2010-01-09', 'douglasville', 'tx', 'Worker was replacing a valve on a waste heat boiler when hydrogen sulfide was released to the atmosphere.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-01-09', 'stream', 'il', 'Worker operating an overhead crane with a pendant was moving sheets of steel. He positioned himself between the load and a metal barrier guard that ran along the aisle or stacks of sheet steel on the opposite side of the aisle. The load struck the other stacks of steel or a metal barrier guard, causing the load to spin, catching the worker between the load and either the stacks of steel or the metal barrier guard.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-10-23', 'sheridan', 'ar', 'Worker was unloading pipes and was struck by two pipes that fell from the load.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2009-11-29', NULL, 'in', 'Worker, a pizza delivery man, was shot fatally during a robbery.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2009-11-29', 'unknown', 'in', 'Worker, a pizza delivery man, was shot fatally during a robbery.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-12-29', 'decatur', 'in', 'Worker fell 80 feet in grain silo.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2009-12-31', 'philadelphia', 'pa', 'Worker was in the basement''s mechanical rooms and suffered a heart attack.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-01-05', 'quinton', 'al', 'Worker was using a toga crane hoist. Worker inhaled a chemical (ammonia) that was leaking by the cooling tower.', 'unknown', 'unknown');
@@ -1343,7 +1343,7 @@ INSERT INTO public.fatalities VALUES ('2010-08-24', 'kansas city', 'mo', 'Worker
 INSERT INTO public.fatalities VALUES ('2010-08-24', 'bettendorf', 'ia', 'Worker crushed to death by a load of copper tubing after losing his balance when load came off the hook as it was being loaded on a flat bed semi.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-08-24', 'bessemer', 'al', 'Worker was part of a litter crew that was working along a roadway and was struck by a car.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-08-24', 'el paso', 'tx', 'Worker was applying acrylic roof coating on a building roof and the section of the roof gave way due to corrosion. Worker fell through the roof and landed on a concrete surface 30 feet below.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2010-08-24', NULL, 'ca', 'Worker sustained fatal injuries after being hit by a log that became unsecured.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2010-08-24', 'unknown', 'ca', 'Worker sustained fatal injuries after being hit by a log that became unsecured.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-08-25', 'greenwood', 'co', 'Worker was working in an aerial lift on a boom truck. The boom snapped in half and the worker fell with the boom.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-08-25', 'murrieta', 'ca', 'Worker crushed to death after getting pinned in a roll-up door that was closing.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-08-26', 'arlington', 'tx', 'Worker was laying concrete and collapsed.', 'unknown', 'unknown');
@@ -1491,10 +1491,10 @@ INSERT INTO public.fatalities VALUES ('2010-10-08', 'new york', 'ny', 'The worke
 INSERT INTO public.fatalities VALUES ('2010-10-08', 'johns creek', 'ga', 'The worker was carrying shingles to the roof using a ladder. The worker lost his footing, slipped off the ladder and struck his head on the ground.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-08', 'white', 'sd', 'The worker was working in a windmill farm construction staging area and was struck and killed by a truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-09', 'cleveland', 'ms', 'The worker was moving materials using a crane. The crane tipped over, and the worker was ejected from the cab of the crane. The crane ran over and crushed the worker.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2010-06-26', 'inc. britt', 'ia', 'Worker suffered fatal injuries when support gave way and he was crushed under boat and trailer.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2010-06-26', 'britt', 'ia', 'Worker suffered fatal injuries when support gave way and he was crushed under boat and trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-06', 'bridgeport', 'oh', 'The worker was working in a private home, the resident of the home heard a noise and found worker. The worker never regained consciousness.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-07', 'garden city', 'ks', 'Two workers were using a plasma cutter to cut a sheet of metal while the metal was sitting on two empty drums of hydraulic fluid. The workers cut into one of the barrels resulting in an explosion/fire. One worker sustained burns to the upper part of his body and face. The other worker sustained fractures and shrapnel wounds. One fatality.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2010-10-08', 'galt', 'c', 'Worker sustained fatal injuries after falling 10 to 15 feet from a beam, landing on his head.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2010-10-08', 'galt', 'ca', 'Worker sustained fatal injuries after falling 10 to 15 feet from a beam, landing on his head.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-09', 'denville', 'nj', 'The worker was crushed between garage door frame and machine he was attempting to move into the garage resulting in fatal injury.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-09', 'union', 'il', 'Two EMTs suffered fatal injuries in a motor vehicle accident when their ambulance was struck by another vehicle whose diver ran a stop sign.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-11', 'metamora', 'il', 'Worker backed his truck to dump a load of CA6/Roadmix; the truck was in a jackknifed position. As the dump was raised he truck tipped over crushing the cab of the truck.', 'unknown', 'unknown');
@@ -1511,7 +1511,7 @@ INSERT INTO public.fatalities VALUES ('2010-10-16', 'tulsa', 'ok', 'Worker was w
 INSERT INTO public.fatalities VALUES ('2010-05-03', 'honolulu', 'hi', 'A coconut tree trimmer suffered fatal injuries after getting caught in his body harness.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-07-31', 'cannon falls', 'mn', 'Worker was accessing a side kit door of tractor trailer semi and lost grip on handrails; falling backwards, hit back of head on concrete floor.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-18', 'austin', 'tx', 'Worker was riding in golf cart. He stepped out while it was still moving, fell, and hit his head.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2010-10-18', ' waipahu', 'hi', 'Worker was operating a front-end loader with backhoe attachment when he lost control on a 40- to 60-degree slope. The tractor flipped onto its left side, fatally pinning the worker under the cab''s roof area. No seat belt was found on the tractor.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2010-10-18', 'waipahu', 'hi', 'Worker was operating a front-end loader with backhoe attachment when he lost control on a 40- to 60-degree slope. The tractor flipped onto its left side, fatally pinning the worker under the cab''s roof area. No seat belt was found on the tractor.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-19', 'merced', 'ca', 'Worker traveling to client''s home, when another person in another vehicle drove into a tractor trailer. The truck hit the worker''s car, resulting in fatal injuries.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-19', 'chicago', 'il', 'While delivering compressed gas cylinders, worker collapsed from compressive asphyxia; cause unknown.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-10-20', 'mount holly', 'nc', 'The roof section of a screened porch fell and struck the worker.', 'unknown', 'unknown');
@@ -1758,7 +1758,7 @@ INSERT INTO public.fatalities VALUES ('2011-01-17', 'highland heights', 'oh', 'W
 INSERT INTO public.fatalities VALUES ('2011-01-17', 'claxton', 'ga', 'Worker was working on a flat metal roof and fell through a flush-mounted translucent skylight panel to the lower concrete surface.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-01-20', 'newark', 'de', 'Worker was operating a forklift to load truck trailers at a loading dock and was found slumped over the side of the forklift.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-01-20', 'buford', 'ga', 'Worker was using a 5-gallon tote of gasoline to prepare to burn wooden pallets and was smoking. Part of the smoking apparatus sparked onto the gasoline igniting an instantaneous flash fire.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-01-20', 'ma 02151', NULL, 'Worker employed at a community-based group home was attacked by a resident.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-01-20', 'revere', 'ma', 'Worker employed at a community-based group home was attacked by a resident.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-01-21', 'orange city', 'ia', 'Worker drilling a test hole became entangled in a boring bit on the drilling machine.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-01-22', 'chicago', 'il', 'City worker enforcing street parking for snow removal was struck by a stolen car.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-01-22', 'jacksonville', 'fl', 'Worker was operating a 225-ton crane as part of the demolition process of a old port container crane. He was lifting a section of the old crane and the crane overturned, crushing the worker underneath the cab of the crane.', 'unknown', 'unknown');
@@ -1884,12 +1884,12 @@ INSERT INTO public.fatalities VALUES ('2011-03-10', 'claxton', 'ga', 'Worker was
 INSERT INTO public.fatalities VALUES ('2011-03-10', 'the woodlands', 'tx', 'Worker operating an electric floor buffer in the building was found unconscious and non-responsive by building security.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-03-11', 'tampa', 'fl', 'Worker was replacing chains on a storage retrieval machine when a vertical lift station came crashing down, striking the worker.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-09-11', 'newark', 'nj', 'Worker was killed after being run over by a highway milling machine.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-01-11', NULL, 'ne', 'Worker was asphyxiated after being engulfed in a grain bin.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-01-11', 'unknown', 'ne', 'Worker was asphyxiated after being engulfed in a grain bin.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-02-09', 'tulsa', 'ok', 'Worker died after falling 15 feet through a snow-covered skylight.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-02-16', 'savannah', 'ga', 'Worker was killed after falling from a boom truck platform.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-02-25', 'la 70115', 'la', 'One worker was killed, another injured after the tire they were removing blew off the axle.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-03-03', 'il 62271', 'il', 'Two workers were electrocuted after lifting an aluminum pipe to free a raccoon and hitting an overhead power line.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-03-04', 'ms 38843', 'ms', 'Worker, who was fixing a chipper motor, was electrocuted after contacting a live wire.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-02-25', 'new orleans', 'la', 'One worker was killed, another injured after the tire they were removing blew off the axle.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-03-03', 'okawville', 'il', 'Two workers were electrocuted after lifting an aluminum pipe to free a raccoon and hitting an overhead power line.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-03-04', 'fulton', 'ms', 'Worker, who was fixing a chipper motor, was electrocuted after contacting a live wire.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-03-04', 'plaucheville', 'la', 'Worker died after being run over by a road grader.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-03-06', 'norco', 'la', 'Worker performing maintenance on a tower died after becoming unconscious from hydrogen sulfide exposure and falling 100 feet.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-03-06', 'north fort myers', 'fl', 'Worker disassembling a fair/carnival ride was found unresponsive.', 'unknown', 'unknown');
@@ -2250,9 +2250,9 @@ INSERT INTO public.fatalities VALUES ('2011-06-27', 'livermore', 'ca', 'Worker w
 INSERT INTO public.fatalities VALUES ('2011-06-27', 'san mateo', 'ca', 'Worker died after falling more than 15 feet from ladder while moving telephone line.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-06-28', 'beaumont', 'ca', 'Utility worker marking a water line was killed by vehicle.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-06-28', 'granbury', 'tx', 'Worker evaluating a sewer lift station died from gas exposure when he ruptured the sewer pipe, releasing liquid sewage and methane gas.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-06-28', 'bossier city', 'ls', 'Worker was electrocuted while using a scissor lift to replace a light bulb.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-06-28', 'bossier city', 'la', 'Worker was electrocuted while using a scissor lift to replace a light bulb.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-06-29', 'mt. clemens', 'mi', 'Worker fell while performing residential roofing work.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2011-06-29', 'inc. miami', 'fl', 'Worker standing under the arms of a skid-steer loader was crushed when the arms/bucket came down, pinning him.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2011-06-29', 'miami', 'fl', 'Worker standing under the arms of a skid-steer loader was crushed when the arms/bucket came down, pinning him.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2011-06-29', 'greenup', 'ky', 'Worker fatally burned when the tractor trailer was struck and caught on fire.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-12-12', 'carroll', 'ia', 'Worker died from carbon monoxide poisoning while refueling generators for a construction site.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2010-12-31', 'warren', 'mi', 'Store worker died after falling off ladder and hitting his head.', 'unknown', 'unknown');
@@ -3408,7 +3408,7 @@ INSERT INTO public.fatalities VALUES ('2012-06-20', 'malakoff', 'tx', 'Worker at
 INSERT INTO public.fatalities VALUES ('2012-06-21', 'blytheville', 'ak', 'Worker performing construction activities collapsed and died from possible heat stress.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-06-23', 'austin', 'tx', 'Worker removing concrete at a construction site died after collapsing.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-06-24', 'lordsburg', 'nm', 'Worker was run over and killed by a field tractor.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2012-06-24', 'abbeville', 'lo', 'Worker was struck and killed by a forklift after the forklift''s brakes failed.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2012-06-24', 'abbeville', 'la', 'Worker was struck and killed by a forklift after the forklift''s brakes failed.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-06-24', 'austin', 'tx', 'Worker was found laying face down in the doorway of the stairs.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-06-24', 'bennet', 'ne', 'Worker using a pipe wrench to loosen the cap from an utility line was killed when the wrench struck his head.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-06-25', 'nitro', 'wv', 'Worker using a supply air hood to perform sandblast operations died from asphyxiation when the air hood was wrongfully connected to a nitrogen line.', 'unknown', 'unknown');
@@ -3700,7 +3700,7 @@ INSERT INTO public.fatalities VALUES ('2012-09-24', 'indianapolis', 'in', 'Worke
 INSERT INTO public.fatalities VALUES ('2012-09-24', 'sugar hill', 'ga', 'Employee died after falling through floor hole while installing metal decking.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-09-24', 'memphis', 'tn', 'Two workers transferring Furfurlyamine and Methanol from a storage tank to a reactor when an explosion occurred. Both suffered second degree burns and were hospitalized. One of these workers who suffered burns over 92% of body died on 9/27/2012.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-09-24', 'rayne', 'la', 'Worker was pouring concrete when he was struck and killed by a vehicle being driven by another employee.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2012-09-24', 'inc. calhoun', 'tn', 'Worker was installing reflectors when struck by a tractor trailer.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2012-09-24', 'calhoun', 'tn', 'Worker was installing reflectors when struck by a tractor trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-09-25', 'chicago', 'il', 'Worker died after being struck on the head by a pallet that had fallen from a trailer he was preparing to unload.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-09-26', 'brewton', 'al', 'Worker was crushed when bucket of skid loader fell on him when he crawled under machine to disconnect a hydraulic line.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2012-09-26', 'baltimore', 'md', 'Worker was electrocuted when a 27-foot ladder hoist the worker was moving fell backwards and struck two 7.62 kV overheard distribution lines.', 'unknown', 'unknown');
@@ -3859,7 +3859,7 @@ INSERT INTO public.fatalities VALUES ('2013-08-24', 'killdeer', 'nd', 'Worker wa
 INSERT INTO public.fatalities VALUES ('2013-08-24', 'torrance', 'ca', 'Worker died from fall while installing floor covering.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-08-23', 'katy', 'tx', 'Worker killed when caught between the ground and bumper of the bucket truck he was repairing.  ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-08-23', 'shippenville', 'pa', 'Worker fatally crushed between a roller conveyor and the conveyor system while working on a hydraulic pump.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2013-08-23', NULL, 'ms', 'Worker electrocuted by power line.     ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2013-08-23', 'unknown', 'ms', 'Worker electrocuted by power line.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-08-23', 'hobart', 'wi', 'Insurance employee was killed in a motor vehicle crash while traveling on business.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-08-23', 'henderson', 'tx', 'Worker died in fall down staircase.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-08-22', 'pocahontas', 'ar', 'Worker killed when caught in a rotary injection molding machine.', 'unknown', 'unknown');
@@ -4037,7 +4037,7 @@ INSERT INTO public.fatalities VALUES ('2013-07-12', 'canby', 'or', 'Worker crush
 INSERT INTO public.fatalities VALUES ('2013-07-12', 'la vergne', 'tn', 'Worker died after being found pinned under parts from a tire assembly machine.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-07-12', 'los angeles', 'ca', 'Worker apparently electrocuted while using electric chipping gun to chip concrete inside a 20-foot-deep trench. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-07-11', 'fort wayne', 'in', 'Two workers killed when struck by semi-truck while repairing a broken down truck on side of highway.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2013-07-11', 'inc. houston', 'tx', 'Employee died from injuries caused by being caught in styrofoam grinder/processor he had been operating.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2013-07-11', 'houston', 'tx', 'Employee died from injuries caused by being caught in styrofoam grinder/processor he had been operating.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-07-11', 'metaire', 'la', 'Employee died from heat-related injuries while replacing a water heater in a residential home attic.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-07-11', 'tulare', 'ca', 'Worker killed when caught between the carriage and frame of a poly tank carrier.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-07-11', 'redwood city', 'ca', 'Worker fatally crushed inside a compactor/baler. ', 'unknown', 'unknown');
@@ -4136,7 +4136,7 @@ INSERT INTO public.fatalities VALUES ('2013-06-06', 'miles', 'tx', 'Employee dro
 INSERT INTO public.fatalities VALUES ('2013-06-06', 'manvel', 'nd', 'Worker found dead underneath a concrete grinder on a road construction project.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-06-06', 'chattanooga', 'tn', 'Worker suffered fatal fall while performing mechanical air system service on roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-06-06', 'fairmont', 'wv', 'Driver killed after trying to stop truck when its brakes released, causing truck to roll backward and strike him.   ', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2013-06-06', 'inc. fergus falls', 'mn', 'Worker killed when company van he was repairing rolled off the ramps, crushing him underneath.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2013-06-06', 'fergus falls', 'mn', 'Worker killed when company van he was repairing rolled off the ramps, crushing him underneath.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-06-05', 'summerville', 'ga', 'Employee killed after falling 30 feet to lower level during demolition activities.  ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-06-05', 'dallas', 'tx', 'Two employees were fatally crushed by polyurethane pipes while loading a flatbed trailer. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2013-06-05', 'big spring', 'tx', 'Employee died from apparent heat stress while changing out tong heads during drilling operations. ', 'unknown', 'unknown');
@@ -5144,7 +5144,7 @@ INSERT INTO public.fatalities VALUES ('2014-07-21', 'sioux falls', 'sd', 'Worker
 INSERT INTO public.fatalities VALUES ('2014-07-21', 'booker', 'tx', 'Worker struck and killed by motor vehicle.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-07-21', 'kansas city', 'mo', 'Worker struck and killed by load that fell from truck storage area.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-07-21', 'fort lauderdale', 'fl', 'Worker struck and killed by concrete joist.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2014-07-20', 'llc ashburn', 'va', 'Worker killed in fall through rooftop exhaust.  ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2014-07-20', 'ashburn', 'va', 'Worker killed in fall through rooftop exhaust.  ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-07-20', 'las vegas', 'nv', 'Worker struck and killed by motor vehicle. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-07-18', 'lawrence', 'ks', 'Worker repairing gutter electrocuted after contacing power line.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-07-18', 'morrisonville', 'ny', 'Worker crushed by load of  top soil from dump truck.', 'unknown', 'unknown');
@@ -5406,7 +5406,7 @@ INSERT INTO public.fatalities VALUES ('2014-05-14', 'winchester', 'ky', 'Worker 
 INSERT INTO public.fatalities VALUES ('2014-05-14', 'caddo', 'tx', 'Worker struck and killed by truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-05-14', 'houston', 'tx', 'Worker died after being pinned between 18-wheeler trailer and loading dock.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-05-13', 'mountain brook', 'al', 'Worker crushed and killed by falling safe.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2014-05-13', 'llc merritt island', 'fl', 'Worker was struck and killed by a tree limb. ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2014-05-13', 'merritt island', 'fl', 'Worker was struck and killed by a tree limb. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-05-12', 'bradyville', 'tn', 'Worker struck and killed by a felled tree.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-05-12', 'mcdonough', 'ga', 'Warehouse worker killed in fall from scaffolding.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2014-05-12', 'minot', 'nd', 'Worker installing plywood sheathing killed in fall from a multi-story roof.  ', 'unknown', 'unknown');
@@ -6237,7 +6237,7 @@ INSERT INTO public.fatalities VALUES ('2015-09-16', 'bellingham', 'wa', 'Worker 
 INSERT INTO public.fatalities VALUES ('2015-09-16', 'houston', 'tx', 'Worker fatally stabbed by fellow employee.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-09-16', 'colts neck', 'nj', 'Worker killed in motor vehicle collision.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-09-16', 'waco', 'tx', 'Worker fatally crushed by boom arm.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2015-09-16', 'inc. harbinger', 'nc', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2015-09-16', 'harbinger', 'nc', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-09-16', 'braddock', 'pa', 'Worker killed in fall from scaffold.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-09-15', 'miami', 'fl', 'Worker struck and killed by dump truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-09-15', 'paterson', 'nj', 'Worker installing drip edge along roof killed in fall.', 'unknown', 'unknown');
@@ -6521,7 +6521,7 @@ INSERT INTO public.fatalities VALUES ('2015-07-03', 'orange cove', 'ca', 'Worker
 INSERT INTO public.fatalities VALUES ('2015-07-02', 'alcoa', 'tn', 'Ten workers responding to train derailment hospitalized due to Acrylonitrile exposure.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-07-02', 'randlett', 'ut', 'Worker drowned when trackhoe veered into river.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-07-02', 'bloomer', 'wi', 'Two workers died from exposure to gases in manure pit.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2015-07-01', 'inc. glendale', 'ca', 'Worker killed in fall through skylight.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2015-07-01', 'glendale', 'ca', 'Worker killed in fall through skylight.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-07-01', 'stillwater', 'ok', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-07-01', 'farmingdale', 'ny', 'Worker fatally crushed between slabs of granite.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-07-01', 'austin', 'tx', 'Worker loading pallets fatally crushed by forklift.', 'unknown', 'unknown');
@@ -6842,7 +6842,7 @@ INSERT INTO public.fatalities VALUES ('2015-03-26', 'salado', 'tx', 'Worker kill
 INSERT INTO public.fatalities VALUES ('2015-03-26', 'new york', 'ny', 'Worker killed in gas explosion. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-03-25', 'fresno', 'ca', 'Worker on top of truck electrocuted after contacting powerline.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-03-25', 'new smyrna beach', 'fl', 'Worker electrocuted after contacting overhead power line. ', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2015-03-25', 'inchelium', 'wa', 'Worker fatally crushed by falling tree.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2015-03-25', 'helium', 'wa', 'Worker fatally crushed by falling tree.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-03-24', 'henrico', 'va', 'Worker struck and killed by tree branch.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-03-24', 'center moriches', 'ny', 'Worker killed after being ejected from forklift', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-03-24', 'fairfield', 'tx', 'Worker struck and killed by machine parts when drill line broke.', 'unknown', 'unknown');
@@ -7562,7 +7562,7 @@ INSERT INTO public.fatalities VALUES ('2016-08-19', 'everett', 'WA', 'Worker kil
 INSERT INTO public.fatalities VALUES ('2016-08-17', 'miami beach', 'FL', 'Worker killed in fall from scaffold', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-08-17', 'katy', 'TX', 'Worker electrocuted by circuit box.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-08-17', 'jefferson city', 'MO', 'Worker on roof died from heat stroke.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-08-16', 'waterliet', 'M', 'Worker killed in fall from scaffold.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-08-16', 'watervliet', 'MI', 'Worker killed in fall from scaffold.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-08-16', 'irving', 'TX', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-08-15', 'denville', 'NJ', 'Worker killed in fall from water tank.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-08-15', 'dixon', 'CA', 'Worker struck and killed by truck that was backing up.', 'unknown', 'unknown');
@@ -7675,7 +7675,7 @@ INSERT INTO public.fatalities VALUES ('2016-07-15', 'cincinnati', 'OH', 'Worker 
 INSERT INTO public.fatalities VALUES ('2016-07-15', 'lindenhurst', 'NY', 'Worker trimming tree killed in fall from bucket truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-07-14', 'fresno', 'CA', 'Worker struck and killed by barrel.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-07-14', 'sapulpa', 'OK', 'Worker killed in excavation collapse.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-07-14', 'quinton', 'Virginia', 'Worker electrocuted while working on attic ventilation system.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-07-14', 'quinton', 'VA', 'Worker electrocuted while working on attic ventilation system.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-07-14', 'marietta', 'OH', 'Worker killed in fall from scaffold.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-07-14', 'huntsville', 'AL', 'Worker on roof died after being struck by lighting.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-07-14', 'tucson', 'AZ', 'Worker electrocuted while repairing air conditioner.', 'unknown', 'unknown');
@@ -7802,7 +7802,7 @@ INSERT INTO public.fatalities VALUES ('2016-06-07', 'altoona', 'IA', 'Worker kil
 INSERT INTO public.fatalities VALUES ('2016-06-07', 'biddleford', 'ME', 'Worker killed in fall from bulding under construction.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-06-07', 'reedsville', 'WV', 'Worker killed in trench collapse.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-06-07', 'fairmont', 'NC', 'Worker drowned while constructing dock in pond.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-06-07', 'sparks', 'Nevada', 'Worker fatally crushed by hay press.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-06-07', 'sparks', 'NV', 'Worker fatally crushed by hay press.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-06-07', 'san antonio', 'TX', 'Worker killed in fall from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-06-06', 'allentown', 'PA', 'Worker killed in fall from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-06-06', 'fort collins', 'CO', 'Worker killed in fall through skylight.', 'unknown', 'unknown');
@@ -7884,7 +7884,7 @@ INSERT INTO public.fatalities VALUES ('2016-05-10', 'saginaw', 'TX', 'Worker str
 INSERT INTO public.fatalities VALUES ('2016-05-10', 'noble', 'LA', 'Worker electrocuted when digger truck made contact with power line.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-05-10', 'snowbird', 'UT', 'Worker killed when ATV fell off embankment into creek.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-05-10', 'pineville', 'LA', 'Worker on construction job site died from heat stress.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-05-09', 'wv 24931', NULL, 'Worker fatally crushed between truck and trailer.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-05-09', 'crawley', 'wv', 'Worker fatally crushed between truck and trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-05-09', 'columbus', 'MS', 'Worker struck and killed by falling roller from portable wood chipper.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-05-08', 'weston', 'WV', 'Worker struck and killed by unknown object while operating chain saw.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-05-07', 'lakewood', 'CO', 'Worker struck and killed by a truck', 'unknown', 'unknown');
@@ -8070,7 +8070,6 @@ INSERT INTO public.fatalities VALUES ('2016-03-14', 'lenexa', 'KS', 'Worker kill
 INSERT INTO public.fatalities VALUES ('2016-03-14', 'roy', 'NM', 'Two workers struck and killed by DOT road maintenance truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-03-14', 'harrisburg', 'NC', 'Worker struck and killed by vehicle.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-03-13', 'niskayuna', 'NY', 'Worker killed in fall from roof.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-03-13', 'saipan', 'MP', 'Worker killed in fall down elevator shaft.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-03-13', 'lynchburg', 'VA', 'Worker struck and killed by boom truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-03-12', 'indianapolis', 'IN', 'Worker fatally shot during store robbery.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-03-12', 'thermal', 'CA', 'Workers electrocuted by power line while pollinating palm trees.', 'unknown', 'unknown');
@@ -8152,7 +8151,7 @@ INSERT INTO public.fatalities VALUES ('2016-02-16', 'belvidere', 'IL', 'Worker k
 INSERT INTO public.fatalities VALUES ('2016-02-16', 'thetford', 'VT', 'Worker struck and killed by falling tree.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-16', 'paul', 'ID', 'Worker drowned in pond.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-16', 'roswell', 'NM', 'Worker killed in fall from vehicle when tire blew out.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-02-15', 'panora', 'Iowa', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-02-15', 'panora', 'ia', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-15', 'gordonsville', 'TN', 'Worker died from injury after being struck by pallet.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-15', 'warrensburg', 'MO', 'Worker fatally crushed inside sand core machine.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-15', 'hesperia', 'CA', 'Worker fatally crushed in hay bailer/compactor.', 'unknown', 'unknown');
@@ -8178,7 +8177,7 @@ INSERT INTO public.fatalities VALUES ('2016-02-04', 'lewiston', 'FL', 'Worker fa
 INSERT INTO public.fatalities VALUES ('2016-02-04', 'oneonta', 'NY', 'Worker fatally crushed between loading dock and trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-04', 'louisville', 'KY', 'Worker fatally shot during robbery.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-03', 'bensalem', 'PA', 'Worker killed when forklift fell off dock.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-02-03', 'sandy', 'Utah', 'Worker died after becoming caught in dough mixer.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-02-03', 'sandy', 'ut', 'Worker died after becoming caught in dough mixer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-02', 'avonmore', 'PA', 'Worker struck and killed by falling tree.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-02', 'miami', 'FL', 'Worker electrocuted while installing ducts in attic of residential house.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-02-02', 'union', 'MO', 'Worker killed in fall from paint line washer dry off oven.', 'unknown', 'unknown');
@@ -8280,7 +8279,7 @@ INSERT INTO public.fatalities VALUES ('2015-12-20', 'jacksonville', 'FL', 'Worke
 INSERT INTO public.fatalities VALUES ('2015-12-19', 'salem', 'NH', 'Worker killed in tire explosion.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-12-18', 'friendly', 'WV', 'Worker on oil and gas tank died from exposure to gas vapors.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-12-18', 'murfreesboro', 'TN', 'Worker killed in fall from roof.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2015-12-18', 'buckley', 'MI', 'Seventeen-year-old worker asphyxiated by carbon monoxide from power washer generator. ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2015-12-18', 'buckley', 'MI', 'Seventeen-year-old worker asphyxiated by carbon monoxide from power washer generator.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-12-18', 'marana', 'AZ', 'Worker killed in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-12-18', 'carterville', 'GA', 'Worker died after being struck by metal panel and falling from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-12-17', 'camanche', 'IA', 'Worker fatally crushed between frame and box of dump truck.', 'unknown', 'unknown');
@@ -8426,7 +8425,7 @@ INSERT INTO public.fatalities VALUES ('2015-10-28', 'decatur', 'AL', 'Worker fat
 INSERT INTO public.fatalities VALUES ('2015-10-28', 'fresno', 'CA', 'Worker killed in fall from elevated surface.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-10-27', 'lewiston', 'ME', 'Worker killed in fall from waste disposal truck.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-10-27', 'ladysmith', 'WI', 'Worker died after being pulled into machine by rollers.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2015-10-27', 'fairmount', 'IN', 'Worker electrocuted while servicing air handling unit.                      ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2015-10-27', 'fairmount', 'IN', 'Worker electrocuted while servicing air handling unit.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-10-27', 'watford city', 'ND', 'Worker struck and killed at roadway construction project.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-10-26', 'chicago', 'IL', 'Worker struck and killed by railroad track rail while being moved by backhoe.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2015-10-26', 'hopkinsville', 'KY', 'Worker struck and killed by steel coil.', 'unknown', 'unknown');
@@ -8532,7 +8531,7 @@ INSERT INTO public.fatalities VALUES ('2017-04-17', 'livingston', 'mt', 'Worker 
 INSERT INTO public.fatalities VALUES ('2017-04-15', 'twain harte', 'ca', 'Worker cutting tree top fatally injured injured in fall.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-15', 'robards', 'ky', 'Worker struck and killed by  semi-trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-15', 'falls city', 'tx', 'Worker suffered fatal head injuries in trench collapse.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-04-14', 'new port richey', NULL, 'Worker died after being run over by a dump truck. ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-04-14', 'new port richey', 'fl', 'Worker died after being run over by a dump truck. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-14', 'joliet', 'il', 'Worker fatally injured while using a chainsaw.   ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-13', 'norwood', 'ma', 'Worker died after falling onto concrete floor.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-13', 'marshalltown', 'ia', 'Worker checking air tank for leaks when struck and killed by piping plug.', 'unknown', 'unknown');
@@ -8547,7 +8546,7 @@ INSERT INTO public.fatalities VALUES ('2017-04-12', 'new york', 'ny', 'Worker di
 INSERT INTO public.fatalities VALUES ('2017-04-12', 'las vegas', 'nv', 'Worker fatally injured in fall from residential roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-11', 'houma', 'la', 'Worker died after being electrocuted. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-11', 'independence', 'mo', 'Worker died after explosion at ammunition plant.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-04-11', 'village of clarkston', 'mi', 'Worker killed in fall from residential roof.  ', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-04-11', 'village of clarkston', 'mi', 'Worker killed in fall from residential roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-11', 'snoqualmie', 'wa', 'Worker struck and killed by tree stumps being pulled from the ground.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-10', 'brooklyn', 'ny', 'Worker struck and killed by truck while loading materials.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-04-10', 'wellsville', 'oh', 'Worker crushed when truck rolled over. ', 'unknown', 'unknown');
@@ -8614,7 +8613,7 @@ INSERT INTO public.fatalities VALUES ('2017-03-21', 'salem', 'ma', 'Worker in ae
 INSERT INTO public.fatalities VALUES ('2017-03-21', 'crestwood', 'ky', 'Worker performing vinyl siding work fatally injured in fall  from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-21', 'greendale', 'wi', ' Worker suffered fatal injuries after being struck by boxes while unloading a trailer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-20', 'lincoln', 'ne', 'Worker fatally injured in fall down stairs.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-03-18', 'ca', NULL, 'Worker fatally injured in fall.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-03-18', 'unknown', 'ca', 'Worker fatally injured in fall.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-17', 'jamaica', 'ny', 'Worker fatally injured in fall from aircraft.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-16', 'dodge city', 'ks', 'Worker fatally injured in fall from roof. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-16', 'pomina', 'ca', 'Worker killed in fall while trimming tree.', 'unknown', 'unknown');
@@ -8637,11 +8636,11 @@ INSERT INTO public.fatalities VALUES ('2017-03-10', 'phoenix', 'az', 'Worker kil
 INSERT INTO public.fatalities VALUES ('2017-03-10', 'kalona', 'ia', 'Worker suffered fatal injured after being struck by lifting device. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-10', 'kansas city', 'mo', 'Worker suffered broken leg in fall and later died from complications during surgery.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-10', 'staten island', 'ny', 'Worker struck and killed by conveyor equipment.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-03-10', 'concord', NULL, 'Worker electrocuted after contacting transformer.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-03-10', 'concord', 'ma', 'Worker electrocuted after contacting transformer.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-09', 'bayonne', 'nj', 'Worked fatally injured when boat collided with a buoy.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-09', 'san antonio', 'tx', 'Worker killed in trench collapse.  ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-09', 'homosassa', 'fl', 'Worker performing tree trimming suffered fatal injuries after being pulled to the ground when tie off ropes were pulled into chipper.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-03-08', 'arizona', NULL, 'Worker crushed between trailer and tire.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-03-08', 'unknown', 'az', 'Worker crushed between trailer and tire.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-08', 'malibu', 'ca', 'Worker died in fall from ladder.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-08', 'freeport', 'mn', 'Worker drowned when skid loader broke through ice.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-03-08', 'deland', 'fl', 'Worker killed in fall from roof.', 'unknown', 'unknown');
@@ -8710,7 +8709,7 @@ INSERT INTO public.fatalities VALUES ('2017-01-30', 'fort wayne', 'in', 'Worker 
 INSERT INTO public.fatalities VALUES ('2017-01-29', 'the woodlands', 'tx', 'Worker washing windows died in fall.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-26', 'saint marys', 'oh', 'Worker died after being struck by drive motor. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-25', 'lakeville', 'ny', 'A worker died after being engulfed by fertilizer.  ', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-01-25', 'lynchburg', NULL, 'Worker died in fall after receiving electrical shock.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-01-25', 'lynchburg', 'va', 'Worker died in fall after receiving electrical shock.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-25', 'york', 'pa', 'Worker died in fall from roof. ', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-25', 'miami', 'fl', 'Worker fatally crushed by hauler.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-24', 'antioch', 'tn', 'Worker died in fall from roof.', 'unknown', 'unknown');
@@ -8739,7 +8738,7 @@ INSERT INTO public.fatalities VALUES ('2017-01-18', 'stockton', 'ca', 'Worker di
 INSERT INTO public.fatalities VALUES ('2017-01-18', 'washington', 'dc', 'Worker died in fall from scaffold.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-18', 'salem', 'sd', 'Worker died in fall from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-17', 'tamuning', 'gu', 'Worker died after being struck by vehicle. ', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2017-01-17', 'millbury', NULL, 'Worker died in fall from roof.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2017-01-17', 'millbury', 'ma', 'Worker died in fall from roof.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-17', 'north hollywood', 'ca', 'Worker fatally crushed between mechanical loading dock.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-16', 'key largo', 'fl', 'Three workers died from exposure to fumes inside storm drain.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2017-01-16', 'bensalem', 'pa', 'Worker fatally crushed by beam.  ', 'unknown', 'unknown');
@@ -8866,7 +8865,7 @@ INSERT INTO public.fatalities VALUES ('2016-12-01', 'el paso', 'tx', 'Worker die
 INSERT INTO public.fatalities VALUES ('2016-11-30', 'kalispell', 'mt', 'Worker fatally crushed by load of trusses.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-11-30', 'tacoma', 'wa', 'Worker fatally shot while responding to domestic dispute.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-11-30', 'dumas', 'tx', 'Worker struck and killed by vehicle.', 'unknown', 'unknown');
-INSERT INTO public.fatalities VALUES ('2016-11-30', 'mi 48809', NULL, 'Worker killed in fall from articulating boom.', 'unknown', 'unknown');
+INSERT INTO public.fatalities VALUES ('2016-11-30', 'belding', 'mi', 'Worker killed in fall from articulating boom.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-11-29', 'san francisco', 'ca', 'Worker struck and killed by equipment.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-11-29', 'milton', 'fl', 'Worker killed after being pulled into cable spool.', 'unknown', 'unknown');
 INSERT INTO public.fatalities VALUES ('2016-11-29', 'santa fe spring', 'ca', 'Worker fatally crushed between crane and steel post.', 'unknown', 'unknown');
