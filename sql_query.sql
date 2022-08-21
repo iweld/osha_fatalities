@@ -44,7 +44,64 @@ CREATE TEMP TABLE fatalities_cleaned AS (
 		incident_date,
 		to_char(incident_date, 'day') AS day_of_week,
 		lower(city) AS city,
-		lower(state) AS state,
+		CASE 
+			WHEN state ILIKE 'AK%' THEN 'alaska'
+			WHEN state ILIKE 'AL%' THEN 'alabama'
+			WHEN state ILIKE 'AS%' THEN 'american samoa'
+			WHEN state ILIKE 'AZ%' THEN 'arizona'
+			WHEN state ILIKE 'AR%' THEN 'arkansas'
+			WHEN state ILIKE 'CA%' THEN 'california'
+			WHEN state ILIKE 'CT%' THEN 'connecticut'
+			WHEN state ILIKE 'CO%' THEN 'colorado'
+			WHEN state ILIKE 'DC%' THEN 'district of columbia'
+			WHEN state ILIKE 'DE%' THEN 'delaware'
+			WHEN state ILIKE 'FL%' THEN 'florida'
+			WHEN state ILIKE 'GA%' THEN 'georgia'
+			WHEN state ILIKE 'GU%' THEN 'guam'
+			WHEN state ILIKE 'HI%' THEN 'hawaii'
+			WHEN state ILIKE 'IA%' THEN 'iowa'
+			WHEN state ILIKE 'ID%' THEN 'idaho'
+			WHEN state ILIKE 'IL%' THEN 'illinois'
+			WHEN state ILIKE 'IN%' THEN 'indiana'
+			WHEN state ILIKE 'KS%' THEN 'kansas'
+			WHEN state ILIKE 'KY%' THEN 'kentucky'
+			WHEN state ILIKE 'LA%' THEN 'louisiana'
+			WHEN state ILIKE 'MD%' THEN 'maryland'
+			WHEN state ILIKE 'ME%' THEN 'maine'
+			WHEN state ILIKE 'MS%' THEN 'mississippi'
+			WHEN state ILIKE 'MN%' THEN 'minnesota'
+			WHEN state ILIKE 'MT%' THEN 'montana'
+			WHEN state ILIKE 'MO%' THEN 'missouri'
+			WHEN state ILIKE 'MI%' THEN 'michigan'
+			WHEN state ILIKE 'MA%' THEN 'massachusetts'
+			WHEN state ILIKE 'MP%' THEN 'mariana islands'
+			WHEN state ILIKE 'NC%' THEN 'north carolina'
+			WHEN state ILIKE 'ND%' THEN 'north dakota'
+			WHEN state ILIKE 'NH%' THEN 'new hampshire'
+			WHEN state ILIKE 'NJ%' THEN 'new jersey'
+			WHEN state ILIKE 'NM%' THEN 'new mexico'
+			WHEN state ILIKE 'NV%' THEN 'nevada'
+			WHEN state ILIKE 'NY%' THEN 'new york'
+			WHEN state ILIKE 'NE%' THEN 'nebraska'
+			WHEN state ILIKE 'OH%' THEN 'ohio'
+			WHEN state ILIKE 'OK%' THEN 'oklahoma'
+			WHEN state ILIKE 'OR%' THEN 'oregon'
+			WHEN state ILIKE 'PA%' THEN 'pennsylvania'
+			WHEN state ILIKE 'PR%' THEN 'puerto rico'
+			WHEN state ILIKE 'RI%' THEN 'rhode island'
+			WHEN state ILIKE 'SC%' THEN 'south carolina'
+			WHEN state ILIKE 'SD%' THEN 'south dakota'
+			WHEN state ILIKE 'TN%' THEN 'tennessee'
+			WHEN state ILIKE 'TX%' THEN 'texas'
+			WHEN state ILIKE 'UT%' THEN 'utah'
+			WHEN state ILIKE 'VT%' THEN 'vermont'
+			WHEN state ILIKE 'WA%' THEN 'washington'
+			WHEN state ILIKE 'WI%' THEN 'wisconsin'
+			WHEN state ILIKE 'WV%' THEN 'west virginia'
+			WHEN state ILIKE 'WY%' THEN 'wyoming'
+			WHEN state ILIKE 'VA%' THEN 'virginia'
+			WHEN state ILIKE 'VI%' THEN 'virgin islands'
+		END AS state,
 		CASE
 			WHEN description LIKE '%(__)%' THEN split_part(description, ')', 2)
 			ELSE description
@@ -209,12 +266,12 @@ LIMIT 5;
 
 incident_date|day_of_week|city     |state|description                                            |plan   |citation|
 -------------+-----------+---------+-----+-------------------------------------------------------+-------+--------+
-   2021-04-14|wednesday  |cleveland|oh   |Worker electrocuted by portable welding machine.       |federal|yes     |
-   2021-01-30|saturday   |mission  |tx   |Worker died in welding explosion.                      |federal|yes     |
-   2020-12-10|thursday   |urbana   |oh   |Worker fatally crushed by seam welder.                 |federal|yes     |
-   2020-05-24|sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
-   2019-07-08|monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
+   2021-04-14|wednesday  |cleveland|ohio |Worker electrocuted by portable welding machine.       |federal|yes     |
+   2021-01-30|saturday   |mission  |texas|Worker died in welding explosion.                      |federal|yes     |
+   2020-12-10|thursday   |urbana   |ohio |Worker fatally crushed by seam welder.                 |federal|yes     |
+   2020-05-24|sunday     |dallas   |texas|Worker electrocted while welding HVAC pipe.            |federal|no      |
+   2019-07-08|monday     |kingwood |texas|Worker electrocuted while welding air conditioner unit.|federal|no      |
    
-
+SELECT * FROM fatalities_cleaned WHERE state IS null
  	
  	
