@@ -12,7 +12,7 @@ SELECT count(*) FROM fatalities;
 
 count|
 -----+
-15077|
+15075|
 
 SELECT * FROM fatalities;
 
@@ -87,7 +87,7 @@ FROM
 
 n_fatalities|
 ------------+
-       15076|
+       15075|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -114,15 +114,15 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2009|         518|            0|         0.0|
+         2009|         518|             |            |
          2010|        1120|          518|       116.0|
          2011|        1198|         1120|         7.0|
          2012|        1023|         1198|       -15.0|
          2013|        1203|         1023|        18.0|
          2014|        1359|         1203|        13.0|
          2015|        1156|         1359|       -15.0|
-         2016|        1113|         1156|        -4.0|
-         2017|        1554|         1113|        40.0|
+         2016|        1112|         1156|        -4.0|
+         2017|        1554|         1112|        40.0|
          2018|        1273|         1554|       -18.0|
          2019|        1392|         1273|         9.0|
          2020|        1134|         1392|       -19.0|
@@ -144,7 +144,7 @@ citation|count|
 --------+-----+
 yes     | 3363|
 no      | 2730|
-unknown | 8983|
+unknown | 8982|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -170,13 +170,13 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-Tuesday    |        2757|     18.29|
-Wednesday  |        2735|     18.14|
-Monday     |        2655|     17.61|
-Thursday   |        2645|     17.54|
-Friday     |        2359|     15.65|
-Saturday   |        1186|      7.87|
-Sunday     |         740|      4.91|
+tuesday    |        2756|     18.28|
+wednesday  |        2735|     18.14|
+monday     |        2655|     17.61|
+thursday   |        2645|     17.55|
+friday     |        2359|     15.65|
+saturday   |        1186|      7.87|
+sunday     |         739|      4.90|
 
 -- What is the number of fatalities involving welding?
 
@@ -215,8 +215,6 @@ incident_date|day_of_week|city     |state|description                           
    2020-05-24|sunday     |dallas   |tx   |Worker electrocted while welding HVAC pipe.            |federal|no      |
    2019-07-08|monday     |kingwood |tx   |Worker electrocuted while welding air conditioner unit.|federal|no      |
    
-
-SELECT DISTINCT state FROM fatalities_cleaned
 
  	
  	
