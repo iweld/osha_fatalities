@@ -6,30 +6,56 @@
 
 -- Test newly populated database
 
-SELECT count(*) FROM fatalities;
-
--- Reults:
-
-count|
------+
-15075|
-
-SELECT * FROM fatalities;
+SELECT * FROM fatalities ORDER BY incident_date DESC LIMIT 10;
 
 -- Results:
 
-incident_date|city        |state|description                                                                 |plan   |citation|
--------------+------------+-----+----------------------------------------------------------------------------+-------+--------+
-   2022-04-22|Smyrna      |TN   |Phongphet Mingsisouphanh (58) fatally struck by concrete pillar.            |State  |No      |
-   2022-04-15|Provo       |UT   |Aldiar Bruno (30) died in fall from roof.                                   |State  |No      |
-   2022-04-14|Toledo      |OH   |Shaun Baker (42) died after becoming caught in machine drive shaft.         |Federal|Yes     |
-   2022-04-10|Mason City  |IA   |Salena Williams (62) suffered fatal injuries in fall on sidewalk.           |State  |No      |
-   2022-04-08|Paton       |IA   |Kevin Cummings (57) fatally crushed under excavator.                        |State  |Yes     |
-   2022-04-07|Spring      |TX   |Miqueas Misael Miranda Perez (33) died in fall from roof.                   |Federal|Yes     |
-   2022-03-31|Santa Rita  |GU   |Hart Lacanilo (58) died in fall from ladder after contacting energized wire.|Federal|Yes     |
-   2022-03-28|Cicero      |IL   |Elias Avila-Romero (37) fatally crushed under forklift.                     |Federal|Yes     |
-   2022-03-28|Houston     |TX   |Margarito Ladezma (50) electrocuted by power lines while trimming trees.    |Federal|No      |
-   2022-03-25|Williamsburg|IA   |Robert Chittick (63) fatally engulfed in corn bin.                          |State  |Yes     |
+incident_date|city        |state|description                                                                 |plan   |citation|id  |
+-------------+------------+-----+----------------------------------------------------------------------------+-------+--------+----+
+   2022-04-22|Smyrna      |TN   |Phongphet Mingsisouphanh (58) fatally struck by concrete pillar.            |State  |No      |8981|
+   2022-04-15|Provo       |UT   |Aldiar Bruno (30) died in fall from roof.                                   |State  |No      |8982|
+   2022-04-14|Toledo      |OH   |Shaun Baker (42) died after becoming caught in machine drive shaft.         |Federal|Yes     |8983|
+   2022-04-10|Mason City  |IA   |Salena Williams (62) suffered fatal injuries in fall on sidewalk.           |State  |No      |8984|
+   2022-04-08|Paton       |IA   |Kevin Cummings (57) fatally crushed under excavator.                        |State  |Yes     |8985|
+   2022-04-07|Spring      |TX   |Miqueas Misael Miranda Perez (33) died in fall from roof.                   |Federal|Yes     |8986|
+   2022-03-31|Santa Rita  |GU   |Hart Lacanilo (58) died in fall from ladder after contacting energized wire.|Federal|Yes     |8987|
+   2022-03-28|Houston     |TX   |Margarito Ladezma (50) electrocuted by power lines while trimming trees.    |Federal|No      |8989|
+   2022-03-28|Cicero      |IL   |Elias Avila-Romero (37) fatally crushed under forklift.                     |Federal|Yes     |8988|
+   2022-03-25|Williamsburg|IA   |Robert Chittick (63) fatally engulfed in corn bin.                          |State  |Yes     |8990|
+   
+-- The reported data contains duplicates. Lets remove all duplicate entries.
+   
+DELETE  	
+FROM fatalities AS f1
+USING fatalities AS f2
+WHERE
+	f1.incident_date = f2.incident_date
+AND 
+	f1.state = f2.state
+and
+	f1.city = f2.city
+AND 
+	f1.id < f2.id
+	
+-- Check for duplicate entries
+
+SELECT
+	incident_date,
+	city,
+	state,
+	count(*)
+FROM 
+	fatalities
+GROUP BY 
+	incident_date,
+	city,
+	state
+HAVING count(*) > 1
+
+-- Results:
+
+incident_date|city|state|count|
+-------------+----+-----+-----+
 
 -- Create a new temp table with 'cleaned' and formatted data  
 
@@ -41,6 +67,7 @@ incident_date|city        |state|description                                    
 DROP TABLE IF EXISTS fatalities_cleaned;
 CREATE TEMP TABLE fatalities_cleaned AS (
 	SELECT
+		id,
 		incident_date,
 		to_char(incident_date, 'day') AS day_of_week,
 		lower(city) AS city,
@@ -120,18 +147,18 @@ SELECT * FROM fatalities_cleaned ORDER BY incident_date DESC LIMIT 10;
  	
 -- Results:
 
-incident_date|day_of_week|city        |state|description                                               |plan   |citation|
--------------+-----------+------------+-----+----------------------------------------------------------+-------+--------+
-   2022-04-22|friday     |smyrna      |tn   | fatally struck by concrete pillar.                       |state  |no      |
-   2022-04-15|friday     |provo       |ut   | died in fall from roof.                                  |state  |no      |
-   2022-04-14|thursday   |toledo      |oh   | died after becoming caught in machine drive shaft.       |federal|yes     |
-   2022-04-10|sunday     |mason city  |ia   | suffered fatal injuries in fall on sidewalk.             |state  |no      |
-   2022-04-08|friday     |paton       |ia   | fatally crushed under excavator.                         |state  |yes     |
-   2022-04-07|thursday   |spring      |tx   | died in fall from roof.                                  |federal|yes     |
-   2022-03-31|thursday   |santa rita  |gu   | died in fall from ladder after contacting energized wire.|federal|yes     |
-   2022-03-28|monday     |houston     |tx   | electrocuted by power lines while trimming trees.        |federal|no      |
-   2022-03-28|monday     |cicero      |il   | fatally crushed under forklift.                          |federal|yes     |
-   2022-03-25|friday     |williamsburg|ia   | fatally engulfed in corn bin.                            |state  |yes     |
+id  |incident_date|day_of_week|city        |state    |description                                               |plan   |citation|
+----+-------------+-----------+------------+---------+----------------------------------------------------------+-------+--------+
+8981|   2022-04-22|friday     |smyrna      |tennessee| fatally struck by concrete pillar.                       |state  |no      |
+8982|   2022-04-15|friday     |provo       |utah     | died in fall from roof.                                  |state  |no      |
+8983|   2022-04-14|thursday   |toledo      |ohio     | died after becoming caught in machine drive shaft.       |federal|yes     |
+8984|   2022-04-10|sunday     |mason city  |iowa     | suffered fatal injuries in fall on sidewalk.             |state  |no      |
+8985|   2022-04-08|friday     |paton       |iowa     | fatally crushed under excavator.                         |state  |yes     |
+8986|   2022-04-07|thursday   |spring      |texas    | died in fall from roof.                                  |federal|yes     |
+8987|   2022-03-31|thursday   |santa rita  |guam     | died in fall from ladder after contacting energized wire.|federal|yes     |
+8989|   2022-03-28|monday     |houston     |texas    | electrocuted by power lines while trimming trees.        |federal|no      |
+8988|   2022-03-28|monday     |cicero      |illinois | fatally crushed under forklift.                          |federal|yes     |
+8990|   2022-03-25|friday     |williamsburg|iowa     | fatally engulfed in corn bin.                            |state  |yes     |
    
 -- What is the number of reported incidents?
    
@@ -144,7 +171,7 @@ FROM
 
 n_fatalities|
 ------------+
-       15075|
+       14914|
         
 -- What is the year to year change for the number of fatal incidents?
         
@@ -171,19 +198,19 @@ WHERE incident_year <> '2022';
 
 incident_year|n_fatalities|previous_year|year_to_year|
 -------------+------------+-------------+------------+
-         2009|         518|             |            |
-         2010|        1120|          518|       116.0|
-         2011|        1198|         1120|         7.0|
-         2012|        1023|         1198|       -15.0|
-         2013|        1203|         1023|        18.0|
-         2014|        1359|         1203|        13.0|
-         2015|        1156|         1359|       -15.0|
-         2016|        1112|         1156|        -4.0|
-         2017|        1554|         1112|        40.0|
-         2018|        1273|         1554|       -18.0|
-         2019|        1392|         1273|         9.0|
-         2020|        1134|         1392|       -19.0|
-         2021|         960|         1134|       -15.0|
+         2009|         515|             |            |
+         2010|        1110|          515|       116.0|
+         2011|        1185|         1110|         7.0|
+         2012|         997|         1185|       -16.0|
+         2013|        1189|          997|        19.0|
+         2014|        1345|         1189|        13.0|
+         2015|        1148|         1345|       -15.0|
+         2016|        1106|         1148|        -4.0|
+         2017|        1541|         1106|        39.0|
+         2018|        1260|         1541|       -18.0|
+         2019|        1376|         1260|         9.0|
+         2020|        1119|         1376|       -19.0|
+         2021|         950|         1119|       -15.0|
          
 -- What is the number of fatalities that received a citation?
          
@@ -199,9 +226,9 @@ GROUP BY
 
 citation|count|
 --------+-----+
-yes     | 3363|
-no      | 2730|
-unknown | 8982|
+yes     | 3345|
+no      | 2683|
+unknown | 8886|
  	
 -- What day of the week has the most fatalities and what is the overall percentage?
 
@@ -227,13 +254,13 @@ ORDER BY
 
 day_of_week|n_fatalities|percentage|
 -----------+------------+----------+
-tuesday    |        2756|     18.28|
-wednesday  |        2735|     18.14|
-monday     |        2655|     17.61|
-thursday   |        2645|     17.55|
-friday     |        2359|     15.65|
-saturday   |        1186|      7.87|
-sunday     |         739|      4.90|
+tuesday    |        2728|     18.29|
+wednesday  |        2706|     18.14|
+monday     |        2626|     17.61|
+thursday   |        2612|     17.51|
+friday     |        2335|     15.66|
+saturday   |        1177|      7.89|
+sunday     |         730|      4.89|
 
 -- What is the number of fatalities involving welding?
 
@@ -248,7 +275,7 @@ WHERE
 
 welding_fatalities|
 ------------------+
-                80|
+                79|
                 
 -- Select the last 5 from the previous query
                 
@@ -272,6 +299,16 @@ incident_date|day_of_week|city     |state|description                           
    2020-05-24|sunday     |dallas   |texas|Worker electrocted while welding HVAC pipe.            |federal|no      |
    2019-07-08|monday     |kingwood |texas|Worker electrocuted while welding air conditioner unit.|federal|no      |
    
-SELECT * FROM fatalities_cleaned WHERE state IS null
+--COPY fatalities_cleaned TO 'C:\Users\Jaime\Desktop\osha_fatalities.csv' DELIMITER ',' CSV HEADER;  
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
  	
  	
