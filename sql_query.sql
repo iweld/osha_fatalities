@@ -291,18 +291,39 @@ LIMIT 5;
 
 -- Results:
 
-incident_date|day_of_week|city     |state|description                                            |plan   |citation|
--------------+-----------+---------+-----+-------------------------------------------------------+-------+--------+
-   2021-04-14|wednesday  |cleveland|ohio |Worker electrocuted by portable welding machine.       |federal|yes     |
-   2021-01-30|saturday   |mission  |texas|Worker died in welding explosion.                      |federal|yes     |
-   2020-12-10|thursday   |urbana   |ohio |Worker fatally crushed by seam welder.                 |federal|yes     |
-   2020-05-24|sunday     |dallas   |texas|Worker electrocted while welding HVAC pipe.            |federal|no      |
-   2019-07-08|monday     |kingwood |texas|Worker electrocuted while welding air conditioner unit.|federal|no      |
-   
---COPY fatalities_cleaned TO 'C:\Users\Jaime\Desktop\osha_fatalities.csv' DELIMITER ',' CSV HEADER;  
-   
+id   |incident_date|day_of_week|city     |state|description                                            |plan   |citation|
+-----+-------------+-----------+---------+-----+-------------------------------------------------------+-------+--------+
+ 9666|   2021-04-14|wednesday  |cleveland|ohio |Worker electrocuted by portable welding machine.       |federal|yes     |
+ 9896|   2021-01-30|saturday   |mission  |texas|Worker died in welding explosion.                      |federal|yes     |
+10091|   2020-12-10|thursday   |urbana   |ohio |Worker fatally crushed by seam welder.                 |federal|yes     |
+10785|   2020-05-24|sunday     |dallas   |texas|Worker electrocted while welding HVAC pipe.            |federal|no      |
+11866|   2019-07-08|monday     |kingwood |texas|Worker electrocuted while welding air conditioner unit.|federal|no      |
 
+-- Select the top 5 states with the most fatal incidents.
    
+SELECT 
+	state,
+	count(*) AS incidents
+FROM fatalities_cleaned
+GROUP BY 
+	state
+ORDER BY 
+	incidents DESC
+LIMIT 5;
+
+-- Results:
+
+state     |incidents|
+----------+---------+
+texas     |     1758|
+california|     1352|
+florida   |     1021|
+new york  |      726|
+illinois  |      635|
+
+--COPY fatalities_cleaned TO 'C:\Users\Jaime\Desktop\osha_fatalities.csv' DELIMITER ',' CSV HEADER;  
+
+
    
    
    
