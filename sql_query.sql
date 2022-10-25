@@ -321,6 +321,7 @@ florida   |     1021|
 new york  |      726|
 illinois  |      635|
 
+
 --COPY fatalities_cleaned TO 'C:\Users\Jaime\Desktop\osha_fatalities.csv' DELIMITER ',' CSV HEADER;  
 
 
