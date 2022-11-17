@@ -3,7 +3,7 @@
 ## Introduction
 A dataset of OSHA fatality reports of work related deaths from June 2009 through Dec 31, 2021.
 
-* [Data Analysis Question & Answers]()
+* [Data Analysis Question & Answers](https://github.com/iweld/osha_fatalities/blob/main/questions_and_answers.md)
 
 ## Problem Statement
 Before this data can be used properly, we must transform and reshape our dataset.
