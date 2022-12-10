@@ -321,6 +321,32 @@ florida   |     1021|
 new york  |      726|
 illinois  |      635|
 
+-- Workplace fatalities resulting from a crime (robbery, workplace violence, etc..) are also recorded by OSHA.
+-- What are the top 5 states that had the most workplace fatalities from stabbings?
+
+SELECT
+	state,
+	count(*) AS stabbing_deaths
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%stabbed%'
+GROUP BY 
+	state
+ORDER BY 
+	stabbing_deaths DESC
+LIMIT 5;
+
+-- Results:
+
+state      |stabbing_deaths|
+-----------+---------------+
+new york   |              7|
+kentucky   |              5|
+california |              5|
+illinois   |              3|
+connecticut|              2|
+
 -- What are the top 10 states that had the most workplace fatalities from shootings?
 
 SELECT
