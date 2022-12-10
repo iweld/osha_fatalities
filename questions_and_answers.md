@@ -349,9 +349,110 @@ florida   |     1021|
 new york  |      726|
 illinois  |      635|
 
+#### ❗ Workplace fatalities resulting from a crime (robbery, workplace violence, etc..) are also recorded by OSHA. ❗ 
 
+#### What are the top 5 states that had the most workplace fatalities from stabbings?
 
+````sql
+SELECT
+	state,
+	count(*) AS stabbing_deaths
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%stabbed%'
+GROUP BY 
+	state
+ORDER BY 
+	stabbing_deaths DESC
+LIMIT 5;
+````
 
+**Results:**
+
+state      |stabbing_deaths|
+-----------|---------------|
+new york   |              7|
+kentucky   |              5|
+california |              5|
+illinois   |              3|
+connecticut|              2|
+
+#### What are the top 10 states that had the most workplace fatalities from shootings?
+
+````sql
+SELECT
+	state,
+	count(*) AS shooting_deaths
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%shot%'
+GROUP BY
+	state
+ORDER BY
+	shooting_deaths DESC
+LIMIT 10;
+````
+
+**Results:**
+
+state     |shooting_deaths|
+----------|---------------|
+indiana   |             28|
+california|             23|
+texas     |             21|
+new york  |             20|
+florida   |             14|
+kentucky  |             13|
+illinois  |              9|
+oregon    |              9|
+nevada    |              9|
+georgia   |              8|
+
+#### What is the total number of shooting deaths per year?
+
+````sql
+WITH get_fatal_shootings AS (
+	SELECT
+		EXTRACT(YEAR FROM incident_date) AS incident_year,
+		count(*) AS shooting_deaths
+	FROM
+		fatalities_cleaned
+	WHERE
+		description ILIKE '%shot%'
+	GROUP BY
+		incident_date
+)
+SELECT
+	incident_year::numeric,
+	count(*) AS total_shooting_deaths
+FROM
+	get_fatal_shootings
+GROUP BY
+	incident_year
+ORDER BY
+	total_shooting_deaths desc;
+````
+
+**Results:**
+
+incident_year|total_shooting_deaths|
+-------------|---------------------|
+2021|                   35|
+2016|                   27|
+2020|                   26|
+2015|                   25|
+2019|                   24|
+2018|                   21|
+2013|                   18|
+2014|                   16|
+2010|                   16|
+2017|                   14|
+2011|                   13|
+2009|                   10|
+2012|                    9|
+2022|                    2|
 
 
 
