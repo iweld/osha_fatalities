@@ -321,6 +321,36 @@ florida   |     1021|
 new york  |      726|
 illinois  |      635|
 
+-- What are the top 10 states that had the most workplace fatalities from shootings?
+
+SELECT
+	state,
+	count(*) AS shooting_deaths
+FROM
+	fatalities_cleaned
+WHERE
+	description ILIKE '%shot%'
+GROUP BY
+	state
+ORDER BY
+	shooting_deaths DESC
+LIMIT 10;
+
+-- Results:
+
+state     |shooting_deaths|
+----------+---------------+
+indiana   |             28|
+california|             23|
+texas     |             21|
+new york  |             20|
+florida   |             14|
+kentucky  |             13|
+illinois  |              9|
+oregon    |              9|
+nevada    |              9|
+georgia   |              8|
+
 
 --COPY fatalities_cleaned TO 'C:\Users\Jaime\Desktop\osha_fatalities.csv' DELIMITER ',' CSV HEADER;  
 
