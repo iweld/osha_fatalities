@@ -377,7 +377,7 @@ oregon    |              9|
 nevada    |              9|
 georgia   |              8|
 
--- What is the total number of shooting deaths by year?
+-- What is the total number of shooting deaths per year?
 
 WITH get_fatal_shootings AS (
 	SELECT
@@ -391,7 +391,7 @@ WITH get_fatal_shootings AS (
 		incident_date
 )
 SELECT
-	incident_year,
+	incident_year::numeric,
 	count(*) AS total_shooting_deaths
 FROM
 	get_fatal_shootings
